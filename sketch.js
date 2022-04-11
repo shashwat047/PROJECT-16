@@ -45,6 +45,9 @@ function setup() {
 
 function draw() {
  background(0);
+
+
+
  if(gameState === PLAY){
 
   // moving ground
@@ -57,6 +60,9 @@ function draw() {
   //moving bow
   bow.y = World.mouseY
   
+  arrowGroup.setColliderEach ("rectangle",0,0,90,10);
+  
+
    // release arrow when space key is pressed
   if (keyDown("space")) {
     createArrow();
